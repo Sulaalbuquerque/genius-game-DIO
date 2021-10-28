@@ -1,2 +1,2 @@
 # genius-game
-Acesse a aplicação pelo link: https://csb-2wyos.netlify.app/
+Acesse a aplicação pelo link: https://csb-lxg8r.netlify.app/
