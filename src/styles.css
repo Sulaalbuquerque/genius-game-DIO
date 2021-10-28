@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: rgb(129, 178, 189);
+  --secondColor: rgb(255, 255, 255);
+
+  --primaryPopupColor: rgba(0, 0, 0, 0.5);
+  --secondPopupColor: rgb(44, 143, 166);
+
+  --buttonColor: rgb(185, 217, 224);
+
+  --greenColor: green;
+  --redColor: red;
+  --yellowColor: yellow;
+  --blueColor: blue;
+}
+
+body {
+  background-color: var(--primaryColor);
+}
+
+.main-game {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genius {
+  display: grid;
+  grid-template-areas:
+    "green red"
+    "yellow blue";
+  grid-gap: 10px;
+  border: 7px solid var(--secondColor);
+  background-color: var(--secondColor);
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.green {
+  grid-area: var(--greenColor);
+  background-color: var(--greenColor);
+  border-top-left-radius: 100%;
+}
+
+.red {
+  grid-area: var(--redColor);
+  background-color: var(--redColor);
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: var(--yellowColor);
+  background-color: var(--yellowColor);
+  border-bottom-left-radius: 100%;
+}
+
+.blue {
+  grid-area: var(--blueColor);
+  background-color: var(--blueColor);
+  border-bottom-right-radius: 100%;
+}
+
+.selected {
+  opacity: 0.3;
+}
+
+/* popup */
+
+.popup-wrapper {
+  display: block;
+  background: var(--thirdColor);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  font-family: arial;
+  text-align: center;
+  width: 100%;
+  height: 90%;
+  max-width: auto;
+  margin: 7% auto;
+  background: var(--secondPopupColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popup-close {
+  cursor: pointer;
+  margin-top: 15px;
+  background: var(--buttonColor);
+  padding: 5px;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-content p {
+  margin-top: 15px;
+}
